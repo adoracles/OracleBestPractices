@@ -19,7 +19,7 @@ Determine what data aggregations you need (median, mean, 24h volume weighted ave
 
 
  
-## Choosing an appropriate oracle(s)
+## Choosing the appropriate oracle(s)
 Your protocol may be an idea right now but projects have the potential to grow exponentially in crypto so when determining which oracle or group of oracles to use, keep security in mind. If you have a goal in mind for funds secured by your protocol, you can compare that with the cost to break or grief different oracles. That calculation can help you determine if you need to use more than one oracle or if your system should use a primary oracle and a fallback oracle. The goal is to maximize the cost to break your data feed/oracle implementation. Different oracles have different attack vectors, and this alone can make it very difficult and expensive to break your data feed. The incentive to break will always be there when potential gains or losses are larger than the cost to break the oracle but with proper implementation and design, you can ensure that threshold is as high as possible. Unfortunately, there is no one oracle design and easy way to calculate the cost to break for all of them since they work differently. 
 
 DRAFT TODO: Can each oracle provide a formula to calculate the cost to grief their protocol for 1 hour?
@@ -27,7 +27,7 @@ DRAFT TODO: Can each oracle provide a formula to calculate the cost to grief the
 Here is a YouTube series where the founders or people very familiar with these oracle protocols explain how they work: [Oracle deep dive](https://www.youtube.com/channel/UCtFzhqGOVXyi91gaiIBEkNw). However, the best way to learn about a protocol is to dive into their documentation, their github, and ask questions on their discord or telegram channels.
 
  
-## Smart architecture for your oracle
+## Smart architecture for your oracle implementation
 Once you determine what oracle or group of oracles to use, you can design the best architecture for the implementation and plan for the worst case scenario. Here are some examples of the architecture considerations when designing your oracle implementation: 
  
 - How will the oracle be implemented in your protocol? Meaning will you use a median of at least three oracles? or are there primary, secondary, and fallback oracles in your system? and how are the fallbacks triggered?
