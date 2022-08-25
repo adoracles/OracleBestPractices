@@ -58,7 +58,7 @@ If you have kept these best practices in mind through your design then the code 
 
 - Check that the the data reasonable. This example checks that the current value is not more than 40 percent of the previous value.
 
-DRAFT TODO: from decimal to integer since there are no integers in solidity.
+DRAFT TODO: from decimal to integer since there are no decimals in solidity.
 
 ```javascript
     require abs(int256 current val – prev val ) < prev val * .40
