@@ -1,6 +1,6 @@
 # Best Practices for Oracle Users
  
-Oracles provide data on-chain. Different oracles accomplish this in different ways and your oracle design should be based on the needs of your application or protocol. However, the data definition, sources, aggreation, and how the oracle is implemented in your smart contracts can follow some best practices to ensure a secure oracle implementation. 
+Oracles provide data on-chain. Different oracles accomplish this in different ways and your oracle design should be based on the needs of your application or protocol. However, the data definition, sources, aggregation, and how the oracle is implemented in your smart contracts can follow some best practices to ensure a secure oracle implementation. 
 
 ## Defining your data
 No matter which oracle you decide is best for your use case, you will have to provide a basic data specification so that the oracle provides the data your protocol requires. The main questions you have to answer are:  what do you need? from where? should it be aggregated?
@@ -20,7 +20,7 @@ Determine what data aggregations you need (median, mean, 24h volume weighted ave
 
  
 ## Choosing an appropriate oracle(s)
-Your protocol may be an idea right now but projects have the potential to grow exponentially in crypto so when determining which oracle or group of oracles to use, keep security in mind. If you have a goal in mind for funds secured by your protocol, you can compare that with the cost to break or grief different oracles. That calculation can help you determine if you need to use more than one oracle or if your system should use a primary oracle and a fallback oracle. The goal is to maximize the cost to break your data feed/oracle implementation. Different oracles have different attack vectors, and this alone can make it very difficult and expensive to break your data feed. The incentive to break will always be there when potential gains or losses are larger than the cost to break the oracle but with proper implementation and design, you can ensure that threshold is as high as possible. Unfortutately, there is no one oracle design and easy way to calculate the cost to break for all of them since they work differently. 
+Your protocol may be an idea right now but projects have the potential to grow exponentially in crypto so when determining which oracle or group of oracles to use, keep security in mind. If you have a goal in mind for funds secured by your protocol, you can compare that with the cost to break or grief different oracles. That calculation can help you determine if you need to use more than one oracle or if your system should use a primary oracle and a fallback oracle. The goal is to maximize the cost to break your data feed/oracle implementation. Different oracles have different attack vectors, and this alone can make it very difficult and expensive to break your data feed. The incentive to break will always be there when potential gains or losses are larger than the cost to break the oracle but with proper implementation and design, you can ensure that threshold is as high as possible. Unfortunately, there is no one oracle design and easy way to calculate the cost to break for all of them since they work differently. 
 
 DRAFT TODO: Can each oracle provide a formula to calculate the cost to grief their protocol for 1 hour?
  
@@ -56,7 +56,7 @@ If you have kept these best practices in mind through your design then the code 
     require (now – timestamp < 1 day  && now-timestampt > 1 hour)
 ```
 
-- Check that the the data reasonable. This example checks that the current value is not more than 40 percent of the previous value.
+- Check that the data reasonable. This example checks that the current value is not more than 40 percent of the previous value.
 
 DRAFT TODO: from decimal to integer since there are no decimals in solidity.
 
