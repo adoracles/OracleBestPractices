@@ -73,6 +73,8 @@ Although this guide may seem simple, following these guidelines will help you de
  <br>
  <br>
  
+DRAFT TODO: This could be a checklist
+
 #### Best practices TLDR
 
 - Define your data
